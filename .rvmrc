@@ -1,0 +1,2 @@
+rvm version@github_gemsetname --create
+rvm 2.1@marklohr_day09 --create
