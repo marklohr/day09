@@ -1,0 +1,13 @@
+<h6>List</h6>
+<a href="/new">Create new blog post</a>
+<ul>
+	<% @blogs.each do |blog|%>
+		<li>
+			<strong><a href="/blog/<%= blog.id %>"></a></strong>
+			<%= blog.title %>
+			<%= blog.date %>
+			<%= blog.content %>
+
+		</li>	
+	<% end %>
+</ul>
