@@ -11,7 +11,7 @@ class Blog
 	property :id, Serial
 	property :title, String
 	property :date, String
-	property :content, String
+	property :content, String #Text, :length => 500000
 end
 
 DataMapper.finalize.auto_upgrade!
@@ -26,7 +26,7 @@ get '/new' do
 end
 
 post '/create_blog' do
-	p params
+	# p params
 	@blog = Blog.new
 	@blog.title = params[:title]
 	@blog.date = params[:date]
@@ -41,7 +41,7 @@ get '/blog/:id' do
 	erb :display_blog
 end
 
-delete 'delete_blog/:id' do
+delete '/delete_blog/:id' do
 	@blog = Blog.get params[:id]
 	@blog.destroy
 	redirect to '/'

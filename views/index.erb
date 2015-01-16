@@ -1,10 +1,9 @@
 <h6>List</h6>
-<a href="/new">Create new blog post</a>
+<a href="/new">Create a new post...</a>
 <ul>
 	<% @blogs.each do |blog|%>
 		<li>
-			<strong><a href="/blog/<%= blog.id %>"></a></strong>
-			<%= blog.title %>
+			<strong><a href="/blog/<%= blog.id %>"><%= blog.title %></a></strong>
 			<%= blog.date %>
 			<%= blog.content %>
 
