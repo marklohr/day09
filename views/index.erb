@@ -1,12 +1,17 @@
-<h6>List</h6>
+<h3>List</h3>
+<br>
 <a href="/new">Create a new post...</a>
 <ul>
-	<% @blogs.each do |blog|%>
+	<% @blogs.each do |blog| %>
 		<li>
-			<strong><a href="/blog/<%= blog.id %>"><%= blog.title %></a></strong>
-			<%= blog.date %>
-			<%= blog.content %>
+			<strong>Title:
+			<a href="/blog/<%= blog.id %>"><%= blog.title %></a></strong><br>
+			<strong>Date:</strong>
+			<%= blog.date %><br>
+			<strong>Your content:</strong>
+			<%= blog.content %><br>
+			<a href="/update_blog/<%= blog.id %>">edit post</a></strong></li>
+			<br>
 
-		</li>	
 	<% end %>
 </ul>

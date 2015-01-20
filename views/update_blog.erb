@@ -1,0 +1,17 @@
+<h2>Edit Your Post</h2>
+<br><br>
+<a href="/">Back</a><br><br>
+
+<form action="/update/<%= @blog.id %>" method="post" id="blog1">
+	<input name="_method" value="patch" type="hidden">
+	<label>Title</label>
+	<input type="text" name="title" value="<%= @blog.title %>">
+	<br>
+	<label>Date</label>
+	<input type="text" name="date" value="<%= @blog.date %>">
+	<br>
+	<label>Blog Entry</label>
+	<textarea name="content" form="blog1" rows="10" column="200"><%= @blog.content %></textarea>
+	<br>
+	<input type="submit" value="Update Blog Entry">
+</form>
